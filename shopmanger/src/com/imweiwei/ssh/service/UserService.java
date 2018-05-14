@@ -7,6 +7,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.NativeQuery;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.imweiwei.ssh.entities.Shop;
 import com.imweiwei.ssh.entities.User;
+import com.sun.glass.ui.Application;
 
 @Controller
 public class UserService {
@@ -71,7 +74,7 @@ public class UserService {
 		User user2=session.get(User.class, user.getUser_id());
 		user2.setUser_name(user.getUser_name());
 		user2.setUser_password(user.getUser_password());
-		user2.setUser_phone(user.getUser_password());
+		user2.setUser_phone(user.getUser_phone());
 		user2.setUser_email(user.getUser_email());
 		user2.setUser_address(user.getUser_address());
 		session.update(user2);
@@ -80,4 +83,10 @@ public class UserService {
 	    sessionFactory.close();
 		return "redirect:/index.jsp";
 	}
+	@RequestMapping("/user_add")
+	public String user_add(@ModelAttribute User user) {
+		
+		return "";
+	}
+	
 }

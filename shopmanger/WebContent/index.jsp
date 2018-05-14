@@ -10,5 +10,6 @@
 
 	<a href="shop_login.jsp">商家登录</a>
 	<a href="user_login.jsp">用户登录</a>
+	<a href="user_sign.jsp">用户注册</a>
 </body>
 </html>

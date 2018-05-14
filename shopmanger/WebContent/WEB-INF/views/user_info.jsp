@@ -8,16 +8,17 @@
 <title>用户修改</title>
 </head>
 <body>
-<form:form commandName="user" role="form" action="user_update" method="post"> 
-<!-- 
-用户名：<form:input path="user.user_name"/><br>
-密码：<form:password  path="user.user_password"/><br>
-手机号：<form:input path="user.user_phone"/><br>
-e-mail：<form:input path="user.user_email"/><br>
-地址：<form:input path="user.user_address"/><br>
- -->
 
+<form:form modelAttribute="user" action="user_update" method="post"> 
+用户名：<form:input path="user_name"/><br>
+密码：<form:password path="user_password" value="${user.user_password }"/><br>
+手机号：<form:input path="user_phone"/><br>
+e-mail：<form:input path="user_email"/><br>
+地址：<form:input path="user_address"/><br>
+<form:input type="hidden" path="user_id"/>
 <input type="submit" value="修改"/>
 </form:form>
+
+
 </body>
 </html>

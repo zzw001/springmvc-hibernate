@@ -10,8 +10,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 
-	<context:property-placeholder location="classpath:db.properties"/>
-	
+	<!-- 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="user" value="${jdbc.user}"></property>
 		<property name="password" value="${jdbc.password}"></property>
@@ -37,9 +36,13 @@
 			<tx:method name="*"/>
 		</tx:attributes>
 	</tx:advice>
+	 -->
 	
+	<!-- 
 	<aop:config>
 		<aop:pointcut expression="execution(* com.imweiwei.ssh.service.*.*(..))" id="txPointcut"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
 	</aop:config>
+	 -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 </beans>
