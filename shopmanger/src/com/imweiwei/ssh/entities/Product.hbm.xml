@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 13, 2018 9:28:20 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.imweiwei.ssh.entities.Product" table="PRODUCT">
+        <id name="pro_id" type="java.lang.Integer">
+            <column name="PRO_ID" />
+            <generator class="native" />
+        </id>
+        <property name="pro_name" type="java.lang.String">
+            <column name="PRO_NAME" />
+        </property>
+        <property name="pro_brand" type="java.lang.String">
+            <column name="PRO_BRAND" />
+        </property>
+        <property name="pro_factory" type="java.lang.String">
+            <column name="PRO_FACTORY" />
+        </property>
+        <property name="pro_dealer" type="java.lang.String">
+            <column name="PRO_DEALER" />
+        </property>
+        <property name="pro_date" type="java.lang.String">
+            <column name="PRO_DATE" />
+        </property>
+        <property name="pro_type" type="java.lang.String">
+            <column name="PRO_TYPE" />
+        </property>
+        <property name="pro_price" type="java.lang.Double">
+            <column name="PRO_PRICE" />
+        </property>
+    </class>
+</hibernate-mapping>
